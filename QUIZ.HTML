@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hydration Assessment Quiz</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo.jpeg" />
+
+    <link rel="stylesheet" href="STYLES/header.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(32, 29, 29);
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #e3d2d2;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        border-style: DASHED;
+        border-color: rgb(0, 0, 0);
+      }
+
+      .question {
+        display: none;
+        padding-bottom: 20px;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .question.active {
+        display: block;
+        transform: translateX(0);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-1">
+        <a href="./main.html"
+          ><img class="logo" src="images/logo.jpeg" alt="FIT KIING Logo"
+        /></a>
+        <a href="./main.html"><p>FITNESS</p></a>
+      </div>
+      <div class="header-2">
+        <a href="main.html"><div class="header-home">Home</div></a>
+        <a href="contact.html"><div class="header-Contact">Contact</div></a>
+        <a href="feedback.html"><div class="header-Feedback">Feedback</div></a>
+        <a href="healthyrecipes.html"
+          ><div class="header-HealthyRecipes">Healthy Recipes</div></a
+        >
+        <a href="workoutsmainpage.html"
+          ><div class="header-about">Home Workouts</div></a
+        >
+      </div>
+    </div>
+    <div class="container">
+      <h1>Hydration Assessment Quiz</h1>
+      <div class="question active" id="question1">
+        <h2>Question 1</h2>
+        <p>How many glasses of water do you typically drink per day?</p>
+        <label><input type="radio" name="question1" value="0-2" /> 0-2</label>
+        <label><input type="radio" name="question1" value="3-5" /> 3-5</label>
+        <label
+          ><input type="radio" name="question1" value="6 or more" /> 6 or
+          more</label
+        >
+      </div>
+
+      <div class="question" id="question2">
+        <h2>Question 2</h2>
+        <p>How often do you drink fluids during exercise?</p>
+        <label
+          ><input type="radio" name="question2" value="Rarely" /> Rarely</label
+        >
+        <label
+          ><input type="radio" name="question2" value="Sometimes" />
+          Sometimes</label
+        >
+        <label
+          ><input type="radio" name="question2" value="Regularly" />
+          Regularly</label
+        >
+      </div>
+
+      <div class="question" id="question3">
+        <h2>Question 3</h2>
+        <p>How would you describe the color of your urine?</p>
+        <label
+          ><input type="radio" name="question3" value="Light yellow" /> Light
+          yellow</label
+        >
+        <label
+          ><input type="radio" name="question3" value="Dark yellow" /> Dark
+          yellow</label
+        >
+        <label
+          ><input type="radio" name="question3" value="Other" /> Other</label
+        >
+      </div>
+
+      <!-- Add remaining questions similarly -->
+
+      <div class="question" id="question4">
+        <h2>Question 4</h2>
+        <p>
+          Do you often experience symptoms of dehydration such as headaches or
+          dry mouth?
+        </p>
+        <label><input type="radio" name="question4" value="Yes" /> Yes</label>
+        <label><input type="radio" name="question4" value="No" /> No</label>
+      </div>
+
+      <div class="question" id="question5">
+        <h2>Question 5</h2>
+        <p>How frequently do you consume caffeinated beverages?</p>
+        <label
+          ><input type="radio" name="question5" value="Daily" /> Daily</label
+        >
+        <label
+          ><input type="radio" name="question5" value="Occasionally" />
+          Occasionally</label
+        >
+        <label
+          ><input type="radio" name="question5" value="Rarely" /> Rarely</label
+        >
+      </div>
+
+      <div class="question" id="question6">
+        <h2>Question 6</h2>
+        <p>
+          Are you currently taking any medications that may affect your
+          hydration levels?
+        </p>
+        <label><input type="radio" name="question6" value="Yes" /> Yes</label>
+        <label><input type="radio" name="question6" value="No" /> No</label>
+      </div>
+
+      <div class="question" id="question7">
+        <h2>Question 7</h2>
+        <p>How often do you consume alcoholic beverages?</p>
+        <label
+          ><input type="radio" name="question7" value="Regularly" />
+          Regularly</label
+        >
+        <label
+          ><input type="radio" name="question7" value="Occasionally" />
+          Occasionally</label
+        >
+        <label
+          ><input type="radio" name="question7" value="Rarely" /> Never</label
+        >
+      </div>
+
+      <div class="question" id="question8">
+        <h2>Question 8</h2>
+        <p>Do you often feel thirsty throughout the day?</p>
+        <label><input type="radio" name="question8" value="Yes" /> Yes</label>
+        <label><input type="radio" name="question8" value="No" /> No</label>
+      </div>
+
+      <div class="question" id="question9">
+        <h2>Question 9</h2>
+        <p>How often do you consume salty or high-sodium foods?</p>
+        <label
+          ><input type="radio" name="question9" value="Regularly" />
+          Regularly</label
+        >
+        <label
+          ><input type="radio" name="question9" value="Occasionally" />
+          Occasionally</label
+        >
+        <label
+          ><input type="radio" name="question9" value="Rarely" /> Rarely</label
+        >
+      </div>
+
+      <div class="question" id="question10">
+        <h2>Question 10</h2>
+        <p>Do you drink water immediately after waking up in the morning?</p>
+        <label><input type="radio" name="question10" value="Yes" /> Yes</label>
+        <label><input type="radio" name="question10" value="No" /> No</label>
+      </div>
+
+      <button id="prevBtn" style="display: none" onclick="prevQuestion()">
+        Previous
+      </button>
+      <button id="nextBtn" onclick="nextQuestion()">Next</button>
+
+      <div id="result"></div>
+    </div>
+
+    <script>
+      let currentQuestion = 1;
+      const questions = document.querySelectorAll(".question");
+
+      function nextQuestion() {
+        if (currentQuestion < questions.length) {
+          questions[currentQuestion - 1].classList.remove("active");
+          questions[currentQuestion].classList.add("active");
+          currentQuestion++;
+          document.getElementById("prevBtn").style.display = "block";
+          if (currentQuestion === questions.length) {
+            document.getElementById("nextBtn").textContent = "Submit";
+            document
+              .getElementById("nextBtn")
+              .setAttribute("onclick", "submitQuiz()");
+          }
+        }
+      }
+
+      function prevQuestion() {
+        if (currentQuestion > 1) {
+          questions[currentQuestion - 1].classList.remove("active");
+          currentQuestion--;
+          questions[currentQuestion - 1].classList.add("active");
+          if (currentQuestion === 1) {
+            document.getElementById("prevBtn").style.display = "none";
+          }
+          if (currentQuestion < questions.length) {
+            document.getElementById("nextBtn").textContent = "Next";
+            document
+              .getElementById("nextBtn")
+              .setAttribute("onclick", "nextQuestion()");
+          }
+        }
+      }
+
+      function submitQuiz() {
+        const answers = {};
+        questions.forEach((question, index) => {
+          const selectedOption = question.querySelector(
+            'input[name="question' + (index + 1) + '"]:checked'
+          );
+          if (selectedOption) {
+            answers["question" + (index + 1)] = selectedOption.value;
+          }
+        });
+        showResult(answers);
+      }
+
+      function showResult(answers) {
+        let score = 0;
+
+        // Evaluate answers and calculate score
+        for (let i = 1; i <= Object.keys(answers).length; i++) {
+          const answer = answers["question" + i];
+          if (
+            answer === "6 or more" ||
+            answer === "Regularly" ||
+            answer === "Light yellow" ||
+            answer === "No" ||
+            answer === "Daily"
+          ) {
+            score += 1;
+          }
+        }
+
+        // Provide feedback based on the score
+        let feedback;
+        if (score >= 8) {
+          feedback = "Excellent! Your hydration habits are outstanding.";
+        } else if (score >= 5) {
+          feedback = "You're doing well, but there's room for improvement.";
+        } else {
+          feedback =
+            "It seems like you may need to focus more on staying hydrated.";
+        }
+
+        // Display the result
+        document.getElementById("result").innerHTML = `<h2>Result</h2>
+    <p>Your score: ${score}</p>
+    <p>${feedback}</p>`;
+      }
+    </script>
+  </body>
+</html>
